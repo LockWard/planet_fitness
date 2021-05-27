@@ -1,0 +1,59 @@
+#tabla1 {
+    font-family: "Roboto", "sans-serif";;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tabla1 td, #tabla1 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tabla1 tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tabla1 tr:hover {background-color: #ddd;}
+  
+  #tabla1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(76, 86, 175);
+    color: white;
+  }
+  #div1{
+    bottom: 8px;
+    left: 8px;
+    position: fixed;
+    z-index: 99;
+    outline: none;
+    background-color: rgba(76, 86, 175, 0.301);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #div1 input{
+    font-family: "Roboto", "sans-serif";
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+#div1 button{
+  font-family: "Roboto", "sans-serif";
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(76, 86, 175);
+  width: 100%;
+  border: rgb(255, 255, 255) solid 1px;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+#div1 button:hover,#div1 button:active{
+  background: rgb(70, 83, 199)
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="text/ico" href="img/img2.ico">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="css/style1.css">
+<script src="js/main1.js"></script>
+<link rel="stylesheet" href="css/style2.css">
+<script src="js/main2.js"></script>
+<link rel="stylesheet" href="css/style3.css">
+<script>
+function salir(){
+  window.close();
+}
+</script>
+<style>
+* {box-sizing: border-box
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto", "sans-serif";;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: rgb(0, 0, 0);
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Clientes {background-color: rgb(255, 255, 255);}
+#Empleados {background-color: rgb(255, 255, 255);}
+#Informacion {background-color: rgb(255, 255, 255);}
+#Salir {background-color: rgb(255, 255, 255);}
+</style>
+</head>
+<body>
+<button class="tablink" onclick="openPage('Clientes', this, '#4CAF50')" id="defaultOpen">Clientes</button>
+<button class="tablink" onclick="openPage('Empleados', this, 'rgb(76, 86, 175)')">Empleados</button>
+<button class="tablink" onclick="openPage('Informacion', this, 'black')">Informacion</button>
+<input type="button" value="Salir" onclick="salir()" class="tablink">
+
+<div id="Clientes" class="tabcontent">
+  <!--Desde aqui cliente-->
+  <table id="tabla">
+      <tr>
+          <th>C#</th>
+          <th>Nombre</th>
+          <th>Entrada</th>
+      </tr>
+      </table>
+  <br>
+  <div id="div">
+  <input type="text" name="" id="nom" placeholder="Nombre del cliente">
+  <button onclick="Crear()">Agregar</button>
+  <button onclick="Eliminar()">Eliminar</button>
+  <p id="totalT">Total: </p>
+  </div>
+  <!--Hasta aqui-->
+</div>
+
+<div id="Empleados" class="tabcontent">
+  <!--Desde aqui empleados-->
+  <table id="tabla1">
+      <tr>
+          <th>E#</th>
+          <th>Nombre</th>
+          <th>Rol</th>
+      </tr>
+      </table>
+  <br>
+  <div id="div1">
+  <input type="text" name="" id="nombre" placeholder="Nombre del empleado">
+  <input type="text" name="" id="rol" placeholder="Rol del empleado">
+  <button onclick="Crear1()">Agregar</button>
+  <button onclick="Eliminar1()">Eliminar</button>
+  </div>
+  <!--Hasta aqui-->
+</div>
+
+<div id="Informacion" class="tabcontent">
+  <!--Desde aqui informacion-->
+  <div class="container">
+    <img src="img/img1.jpg" alt="Notebook" style="width:100%;">
+    <div class="content">
+      <h1>Planet Fitness</h1>
+      <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div>
+  </div>
+  <!--hasta aqui-->
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
